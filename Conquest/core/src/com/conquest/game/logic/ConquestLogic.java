@@ -12,7 +12,7 @@ public class ConquestLogic {
 	public ConquestLogic(Tile[] monde,Player[] participants,int celuiQuiCommence) {
 		this.monde = monde;
 		this.participants = participants;
-		this.joueurAutorise = celuiQuiCommence % participants.length;
+		//this.joueurAutorise = celuiQuiCommence % participants.length;
 	}
 	
 	public Tile[] getWorld() {
