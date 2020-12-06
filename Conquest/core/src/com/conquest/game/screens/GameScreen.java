@@ -30,6 +30,7 @@ public class GameScreen implements Screen ,InputProcessor {
 	final ConquestGame game;
 	final static Vector3 origin =  new Vector3(0f, 0f, 0f);
 	final static Vector3 YAxis =new Vector3(0f, 1f, 0f);
+	final static Vector3 IYAxis =new Vector3(0f, -1f, 0f);
 	final static Vector3 XAxis =new Vector3(1f, 0f, 0f);
 	final static Vector3 ZAxis =new Vector3(0f, 0f, 1f);
 	private static final float sensitivity = .2f;
@@ -112,10 +113,9 @@ public class GameScreen implements Screen ,InputProcessor {
 		if(Gdx.input.isKeyPressed(Input.Keys.UP)) {
 			camera.translate(YAxis);
 		} else if(Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-			camera.translate(YAxis.scl(-1));
+			camera.translate(IYAxis);
 		}
 		
-		//camera.lookAt(0f,0f,0f);
 		camera.update();
 		
 		modelBatch.begin(camera);
